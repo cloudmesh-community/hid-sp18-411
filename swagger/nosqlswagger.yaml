@@ -1,0 +1,68 @@
+swagger: '2.0'
+info:
+  version: 0.0.1
+  title: MongoDB through Swagger
+  description: Swagger API to expose MongoDB 
+  contact:
+    name: Venkatesh Aditya Kaveripakam
+    email: vekave@iu.edu
+schemes: 
+  - http
+host: localhost:8080
+basePath: /
+consumes: 
+  - application/json
+produces: 
+  - application/json
+paths:
+  /NoSQL:
+    get:
+      operationId: getRecords
+      responses:
+        100:
+          description: Get operation failed
+        200:
+          description: success
+    post:
+      operationId: postRecords
+      parameters: 
+        - name: record
+          in: body
+          description: entry for the database
+          schema:
+            $ref: "#/definitions/NoSQLentry"
+      responses:
+        100:
+          description: post operation failed
+        200:
+          description: successfully posted
+  /NoSQL/{id}:
+    parameters:
+        - name: id
+          in: path
+          description: id of entry
+          type: string
+          required: true
+    get:
+      operationId: getrecordbyID
+      responses:
+        200:
+          description: record was fetched
+    put:
+      operationId: putrecordbyID
+      description: record we want to save
+      responses:
+        200:
+          description: OK
+definitions:
+  NoSQLentry:
+    type: object
+    properties:
+      text:
+        type: string
+        description: NoSQL entry
+    
+  
+
+
+  
