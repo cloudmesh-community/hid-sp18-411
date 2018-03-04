@@ -1,14 +1,14 @@
 import connexion
 import six
-from flask import Flask
-from flask_pymongo import PyMongo
+import json
 
 from swagger_server.models.no_sq_lentry import NoSQLentry  # noqa: E501
 from swagger_server import util
+from pymongo import Mongo
 
-app = Flask(__name__)
-app.config['ONGO_DBNAME'] = 'student details'
-mongo = PyMongo(app)
+client = Mongo(port=27017)
+db = client.variables
+
 
 def get_records():  # noqa: E501
     """get_records
@@ -18,7 +18,11 @@ def get_records():  # noqa: E501
 
     :rtype: None
     """
-    return 'do some magic!'
+    l = list()
+    for each in db.Var.find():
+        l.append((each['Name'], each['HID']))
+    return json.dumps(l)
+
 
 
 def getrecordby_id(id):  # noqa: E501

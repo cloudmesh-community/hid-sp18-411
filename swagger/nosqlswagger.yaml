@@ -18,11 +18,16 @@ paths:
   /NoSQL:
     get:
       operationId: getRecords
+      produces:
+        - "application/json"
       responses:
-        100:
-          description: Get operation failed
-        200:
-          description: success
+        "200":
+          description: "Cloud Students list"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/NoSQLentry"
+              
     post:
       operationId: postRecords
       parameters: 
@@ -31,6 +36,7 @@ paths:
           description: entry for the database
           schema:
             $ref: "#/definitions/NoSQLentry"
+            
       responses:
         100:
           description: post operation failed
@@ -45,9 +51,20 @@ paths:
           required: true
     get:
       operationId: getrecordbyID
+      parameters:
+        - name: id
+          in: path
+          description: name of variable
+          required: true
+          type: string
+      produces:
+        - "application/json"
       responses:
-        200:
-          description: record was fetched
+        "200":
+          description: "variable value"
+          schema:
+            $ref: "#/definitions/NoSQLentry"
+            
     put:
       operationId: putrecordbyID
       description: record we want to save
@@ -56,11 +73,18 @@ paths:
           description: OK
 definitions:
   NoSQLentry:
-    type: object
+    type: "object"
+    required:
+      - "id"
+      - "Name"
+      - "HID"
     properties:
-      text:
-        type: string
-        description: NoSQL entry
+      id:
+        type: "string"
+      Name:
+        type: "string"
+      HID:
+        type: "string"
     
   
 
