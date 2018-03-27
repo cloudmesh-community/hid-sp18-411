@@ -1,0 +1,94 @@
+% status: 70
+% chapter: Distributed Computing
+
+\title{Apache Flink}
+
+
+\author{Venkatesh Aditya Kaveripakam}
+\affiliation{%
+\institution{Indiana University
+Bloomington} \city{Bloomington} \state{Indiana} \postcode{47408} \country{USA}
+}
+\email{vekave@iu.edu}
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{Venkatesh}
+
+\keywords{hid-sp18-411, Flink, Stream Processing, Distributed Computing, Analytics }
+%use up to 5 keywords
+
+\maketitle
+
+\section{Introduction}
+Distributed data processing platforms for cloud computing are important tools
+for large-scale data analytics. Hadoop MapReduce is the most prominent
+distributed data processing technology since its inception in 2006. Hadoop
+dominated the field of Big Data processing for over a decade, however the
+implementation complexity and challenging programming model has led to the
+development of advanced dataflow-oriented platforms. Apache Spark and Flink are
+the modern technologies in the field of distributed data processing that
+overcome the implementation complexity and performance overhead of Hadoop
+systems. They are designed to satisfy real-time data processing requirements to
+improve digital services in this generation of continuously evolving extremely
+large-datasets. In this paper we discuss Apache Flink as a stream data
+processing engine, its ability to process and yield continuous data analytics
+results. We compare the pros and cons of Apache Flink with its closest
+competitor Apache Spark.
+\section{Data-sets and Processing methodologies}
+In the space of Big Data processing it is first important to understand the type
+of data sets and the processing models associated with them. There are 2 types
+of datasets and 2 types of execution models that can be adopted by a distributed
+data processing engine.
+\begin{enumerate}
+    \item \textbf{Unbounded dataset - } These are the data that are being
+    generated continuously and in a limitless fashion. Unbounded data make up
+    real-time data. They are also called as infinite data. Some examples this
+    kind of data include user transaction data, sensor data, log data etc.
+    \item \textbf{Bounded dataset - } These are the finite unchanging data whose
+    complete information is well known. Quarterly marketing data of a company is
+    one form of bounded data that is known and fixed during the time of analysis.
+\end{enumerate}
+\begin{enumerate}
+    \item \textbf{Streaming Execution - } Processing that executes continuously
+    as long as data is being produced. Commonly stream processing connects to
+    external data sources, enabling applications to integrate certain data into
+    the application flow.
+    \item \textbf{Batch Execution - } Processing of data in batches and timely
+    manner rather than continuous integration of data to the processing
+    applications.
+\end{enumerate} ~\cite{Apache-Flink}
+Either type of datasets can be processed by using Streaming or Batch execution
+model. Apache Flink however stands out in its ability to perform Streaming
+execution on unbounded datasets. While Hadoop is a pure batch processing
+framework and Apache spark support stream execution(micro batch)  execution,
+Apache Flink is considered to be a true streaming engine.
+\section{Apache Flink Features}
+Flink is an open source Real Time Data Analytics (RTDA) framework that was
+specifically designed to tackle the performance and implementation drawbacks of
+Hadoop and Apache Spark. Flink uses a controlled cyclic dependency graph during
+runtime for its data flow management. It is an operator-based streaming model.
+A continuous flow operator is one that processes data when it arrives, without
+any delay in collecting the data or processing the data.~\cite{[2]}
+One of the biggest advantages of Flink is its ability to provide exactly-once
+semantics for stateful computations. ‘Stateful’ applications maintain a summary
+of data that has been processed over time, and Flink’s checkpointing mechanism
+ensures exactly-once semantics for an application’s state in the event of a
+failure. This also enhances the fault tolerance capacity of the Flink system,
+where in the trade off between reliability and latency is minimal and there is
+also zero data loss.
+The combination of high throughput and low latency of Flink makes it one of the
+fastest distributed data processing systems. Sometimes being able to process
+data at 10 times faster speed than Apache Storm.
+
+
+\section{conclusion}
+
+\begin{acks}
+
+    The authors would like to thank Dr.~Gregor~von~Laszewski for his
+    support and suggestions to write this paper.
+
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report}
