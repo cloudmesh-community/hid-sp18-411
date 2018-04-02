@@ -1,0 +1,60 @@
+% status: 30
+% chapter: TBD
+
+\title{Twitter Sentimental Analysis with Spark}
+
+
+\author{Venkatesh Aditya Kaveripakam}
+\affiliation{%
+\institution{Indiana University}
+\city{Bloomington}
+\state{IN}
+\postcode{47408}
+\country{USA}}
+\email{vekave@iu.edu}
+
+\author{Surya Prakash Sekar}
+\affiliation{%
+\institution{Indiana University}
+\city{Bloomington}
+\state{IN}
+\postcode{47408}
+\country{USA}}
+\email{sursekar@iu.edu}
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{Aditya}{Surya}
+
+
+\begin{abstract}
+
+\end{abstract}
+
+\keywords{hid-sp18-411,hid-sp18-408, Swagger, Spark, API, Cloud, Twitter}
+
+
+\maketitle
+
+\section{Introduction}
+In this project we aim to build a RESTful webservice that will accept a topic
+of interest as input from the user and query the relevant hashtag data from
+the twitter API using python cursors. All pre-processing involved with the
+tweets data will be handled with the help of in-built python libraries and a
+consumable dataset for spark would be created. SparkML library is then used
+to perform sentimental analysis on the tweets data and a summary is provided
+with respect to it. One of the potential problem to our service would be its
+ability to fetch enough tweets perform sentiment analysis and produce a
+reliable result.
+Apache Spark is an open source cluster computing framework that is the
+successor to Apache Hadoop. The micro-batch processing capabilities and high
+speed of spark make it. Apache Spark also bundles libraries for applying
+machine learning and graph analysis techniques to data at scale.
+The web service will be deployed on Chameleon Cloud and tested for uniform
+performance and scalability. Chameleon cloud is a cloud learning
+platform/testbed provided by Computation Institute (CI) at the University of
+Chicago and Argonne National Laboratory and the Texas Advanced Computing
+Center (TACC).
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report} 
