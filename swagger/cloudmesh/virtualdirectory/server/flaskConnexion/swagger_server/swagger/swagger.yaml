@@ -1,0 +1,27 @@
+---
+swagger: "2.0"
+info:
+  description: "Swagger API to expose MongoDB "
+  version: "0.0.1"
+  title: "MongoDB through Swagger"
+  contact:
+    name: "Venkatesh Aditya Kaveripakam"
+    email: "vekave@iu.edu"
+host: "localhost:8080"
+basePath: "/"
+schemes:
+- "http"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /NoSQL:
+    get:
+      operationId: "get_records"
+      parameters: []
+      responses:
+        200:
+          description: "Cloud Students list"
+      x-swagger-router-controller: "swagger_server.controllers.default_controller"
+definitions: {}
