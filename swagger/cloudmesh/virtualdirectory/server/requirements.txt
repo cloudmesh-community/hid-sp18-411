@@ -1,0 +1,7 @@
+connexion == 1.1.15
+python_dateutil == 2.6.0
+typing == 3.5.2.2
+setuptools >= 21.0.0
+pymongo >= 2.6.3
+Flask == 0.12
+Flask-PyMongo == 0.5.1
