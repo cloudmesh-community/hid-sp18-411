@@ -3,7 +3,7 @@ YAML=swagger.yaml
 DIR=NoSQL/
 STUB_PATH=NoSQL/server/flaskConnexion	
 
-all: clean start-docker
+all: clean build start-docker
 
 build:
 	wget https://www.dropbox.com/s/0730xoz8rboes7b/swagger-codegen-cli-2.3.1.jar
