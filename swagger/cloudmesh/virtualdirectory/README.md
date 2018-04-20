@@ -21,10 +21,18 @@ runs within the docker container as well.
 
 #### Makefile
 * The swagger service can then be run locally with the command, make sure the database is up and running: 
-
+    
+    
+    `
+    mongod --dbpath /hid-sp18-411/swagger/cloudmesh
+    `
+    From a new session host the mongo server with the below command
+    `
+    mongo --host 127.0.0.1:27017
+    `
     `
     sudo make start-service
-    `  
+    `
 
 ##### Check the results using your browser
 * The results are then available at http://localhost:8080/NoSQL  
