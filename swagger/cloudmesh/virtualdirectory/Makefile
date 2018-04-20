@@ -5,6 +5,15 @@ STUB_PATH=NoSQL/server/flaskConnexion
 
 all: clean build start-docker
 
+start-service:
+	cd $(STUB_PATH)
+	
+	pip install -r requirements.txt
+
+	python setup.py install
+		
+	python -m swagger_server
+
 build:
 	wget https://www.dropbox.com/s/0730xoz8rboes7b/swagger-codegen-cli-2.3.1.jar
 	
