@@ -3,7 +3,6 @@ import twitter_analysis_with_sparkobj as ta
 import cloud_computing_project as tg
 import os
 
-static_file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)))
 app = Flask(__name__)
 
 @app.route('/')
@@ -15,7 +14,7 @@ def index():
 @app.route('/search_word', methods=['POST'])
 def search_word():
     word = request.form['Search']
-    for file in os.scandir("static/"):
+    for file in os.scandir("./usr/local/static/"):
         os.unlink(file.path)
     tg.twitter_download(word)
     ta.start_spark_sentiment_analysis(word)
@@ -24,4 +23,4 @@ def search_word():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')

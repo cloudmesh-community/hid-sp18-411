@@ -18,7 +18,7 @@ def start_spark_sentiment_analysis(hashtag):
 
     pipeline = Pipeline(stages=[tokenizer, remover, hashingTF, lr])
 
-    partsDF = pandas.read_csv("static/tweet_sentiment.csv")
+    partsDF = pandas.read_csv("./usr/local/static/tweet_sentiment.csv")
     datasize = partsDF.shape[0]
     trainSet = partsDF.sample(frac=0.5, replace=False)
 
@@ -53,4 +53,4 @@ def start_spark_sentiment_analysis(hashtag):
     ax.set_ylabel('Frequency', fontsize=18, weight='bold')
     ax.set_xticklabels(x_labels, fontsize=18, weight='bold', rotation=0)
 
-    plt.savefig("static/result.png")
+    plt.savefig("./usr/local/static/result.png")

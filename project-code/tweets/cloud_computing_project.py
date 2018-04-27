@@ -1,6 +1,8 @@
 import tweepy
 import pandas as pd
 import numpy as np
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 import re
 import html
@@ -9,8 +11,8 @@ import matplotlib.pyplot as plt
 
 # Removed API Key and Secret
 def twitter_download(hashtag):
-    API_KEY = ''
-    API_SECRET = ''
+    API_KEY = '3nAw2E7Le0G2k4TYwcShLQpIa'
+    API_SECRET = '2neHmiZjzToxkrcErylPYubnXEUwoCTUPuwDoXPiFgQX2WY2hc'
     auth = tweepy.AppAuthHandler(API_KEY, API_SECRET)
     api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
@@ -23,7 +25,7 @@ def twitter_download(hashtag):
     df = pd.DataFrame({'tweets': tweet_store})
 
     # Saving the data to a csv file
-    df.to_csv('static/tweet_cloud_me.csv', sep=',', encoding='utf-8', index=False)
+    df.to_csv('./usr/local/static/tweet_cloud_me.csv', sep=',', encoding='utf-8', index=False)
 
     # Pre-Processing the tweets data from twitter
     tweets_url_removed = []
@@ -65,7 +67,7 @@ def twitter_download(hashtag):
     tweets_clean = tweets_df.values.tolist()
 
     # Saving the clean data to a csv file
-    tweets_df.to_csv('static/tweet_clean.csv', sep=',', encoding='utf-8', index=False)
+    tweets_df.to_csv('./usr/local/static/tweet_clean.csv', sep=',', encoding='utf-8', index=False)
 
     # Determining the Sentiment of the Tweet
     scores = []
@@ -86,4 +88,4 @@ def twitter_download(hashtag):
     final_df = pd.DataFrame({'Tweets': tweets_clean, 'Sentiment': polarity})
 
     # Saving the results to a csv file
-    final_df.to_csv('static/tweet_sentiment.csv', sep=',', encoding='utf-8', index=False)
+    final_df.to_csv('./usr/local/static/tweet_sentiment.csv', sep=',', encoding='utf-8', index=False)
