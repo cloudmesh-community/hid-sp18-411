@@ -50,11 +50,12 @@ negative tweets with respect to the input hashtag is also displayed.
 A lot of research related to social media data would provide a relevant guide on how 
 social media data can be used in research, by the inherent dynamism in society 
 instantaneously reflected in social media demands a breakaway from the traditional 
-process of academic publishing. This is true of many fields, but is especially relevant 
-when we consider the immediacy and mutability of social media data. In order to 
-truly capture the potential of social media, we need to explore methods of conducting 
-and disseminating research that can keep up with the pace of modern life. Data in 
-social media represents users behavior, attitudes, feelings, views and relationships are
+process of academic publishing. This is true of many fields, but is 
+especially relevant when we consider the immediacy and mutability of 
+social media data. In order to truly capture the potential of social 
+media, we need to explore methods of conducting and disseminating 
+research that can keep up with the pace of modern life. Data in social media 
+represents users behavior, attitudes, feelings, views and relationships are
 increasingly being re-used for research purposes in in both academia and industry. 
 Even though social media has entered the deeper circle of our culture, we must 
 not overlook the fact that social media is driven by the people of our society. 
@@ -66,9 +67,9 @@ and should take into consideration the above-mentioned issues while they are
 conducting the research.
 
 With millions of users and thousands of tweets every second worldwide, enormous 
-data is publicly available with Twitter that can be used for various research purposes. 
-Twitter is one of the best places for breaking news because of it’s unique 
-small-size story sharing and re-tweeting options. 
+data is publicly available with Twitter that can be used for 
+various research purposes. Twitter is one of the best places for breaking news 
+because of it’s unique small-size story sharing and re-tweeting options. 
 It is also well known that using certain words in speech can attract a lot of attention 
 either positive or negative. Some amazing features of twitter are retweeting and 
 favoriting that helps people support a person’s idea through showing their 
@@ -108,17 +109,19 @@ manually tag some tweets as positive and negative and then calculate the
 frequency of different words that are occurring in these sentences can be 
 identified as words belonging to that category. Once the word dictionaries are 
 available, the sentiment of more tweets can be automatically identified using 
-these word dictionaries. Some of the real world examples of sentimental analysis are,
-In order to understand consumer attitudes and restructure their operations, Expedia Canada 
-took advantage of when they noticed that there was a steady increase in negative feedback 
-to the music used in one of their television advertsiments and this helped them understand 
-the negative impact the music was causing to their advertsiments ~\cite{hid-sp18-418-sentimental-analysis-application}. 
-Some of the most growing and challenging directions of future sentiment analysis techniques on social 
-media is argumentation. While sentiment analysis is about understanding users' opinions 
-on some aspects, argumentation aims at identifying the the reasons of such opinions 
-and the overall reasoning path in general. Also, problems like presence of sarcasm 
-in tweets, fake user tweets, bot generated data still hurt the overall results of 
-a sentimental analysis classifier. 
+these word dictionaries. Some of the real world examples of sentimental analysis
+ are,In order to understand consumer attitudes and restructure their operations, 
+Expedia Canada took advantage of when they noticed that there was a 
+steady increase in negative feedback to the music used in one of their 
+television advertsiments and this helped them understand the negative impact 
+the music was causing to their advertsiments ~\cite{hid-sp18-418-sentimental-analysis-application}. 
+Some of the most growing and challenging directions of future sentiment 
+analysis techniques on social media is argumentation. While sentiment analysis 
+is about understanding users' opinions on some aspects, argumentation aims at 
+identifying the the reasons of such opinions and the overall reasoning path in 
+general. Also, problems like presence of sarcasm in tweets, fake user tweets, 
+bot generated data still hurt the overall results of a sentimental analysis 
+classifier. 
 
 
 \section{Literature Survey}
@@ -129,11 +132,12 @@ applied to implement the sentimental analysis classifier.
 The work from one of the paper utilizes the naive Bayes and fuzzy Classifier to 
 classify Tweets into positive, negative or neural behavior of a person ~\cite{hid-sp18-418-fuzzy-naive}. 
 The combined proposed method which is a hybrid of naive Bayes and Fuzzy classifier, 
-from this paper is more efficient in terms of Accuracy, Precision and Recall according 
-to the evaluation in their dataset and classification results, this enables us to construct 
-multiple classifiers to check the performance of the different methods 
-considered in our project as well. They have also demonstrated about the common 
-process in NLP that can help us derive the meaning or context of a given phrase, 
+from this paper is more efficient in terms of Accuracy, Precision and Recall 
+according to the evaluation in their dataset and classification 
+results, this enables us to construct multiple classifiers to check the 
+performance of the different methods considered in our project as 
+well. They have also demonstrated about the common process in NLP that can help 
+us derive the meaning or context of a given phrase, 
 we have used some of these processes in our project to better understand the 
 context of the tweets for the task at hand to correctly predict the sentiment 
 behind each tweet~\cite{hid-sp18-418-fuzzy-naive}.\\ 
@@ -155,19 +159,20 @@ data~\cite{hid-sp18-418-sentimental-analysis}.
 
 \section{Data Description}
 The tweets are extracted using the Twitter API through creating a developer 
-account with Twitter. We would require the API secret key and consumer key for performing 
-this task using the API. Since the amount of data that is available on twitter 
-is really vast, we have used only a sample of tweets from the recent 
-tweets in the April 2018 which has the user input hashtag in it. We utilized the 
-tweepy cursor function in tweepy library to set the language of the tweets and 
-also to search based on the hashtag provided by the user and also applying a 
-limit on number of tweets being extracted to 10000. We were able to get fields 
-like tweet text, date, favorites count, retweet count and username. 
-But there is a lot of missing data in certain fields like demographics data or 
-latitude and longitude. After the initial exploration into the data, we think 
-that we can only use certain fields like date, text, username, favorites and 
-retweets for our analysis. Below is the description of some of the fields from twitter. 
-Some tweets would have URL data attached to them, emoticons and so on.
+account with Twitter. We would require the API secret key and consumer 
+key for performing this task using the API. Since the amount of data that 
+is available on twitter is really vast, we have used only a sample of tweets 
+from the recent tweets in the April 2018 which has the user input hashtag in it. 
+We utilized the tweepy cursor function in tweepy library to set the language 
+of the tweets and also to search based on the hashtag provided by the user 
+and also applying a limit on number of tweets being extracted to 10000. 
+We were able to get fields like tweet text, date, favorites count, retweet 
+count and username. But there is a lot of missing data in certain fields like 
+demographics data or latitude and longitude. After the initial exploration 
+into the data, we think that we can only use certain fields like date, text, 
+username, favorites and retweets for our analysis. Below is the description 
+of some of the fields from twitter. Some tweets would have URL data attached to 
+them, emoticons and so on.
 
 \section{Pre-Processing}
 Before the text can be used for sentiment analysis, it requires some preprocessing. 
@@ -176,14 +181,15 @@ or videos because we are analyzing only text in the scope of this project.
 Nltk package in python provides many useful methods to perform text pre-processing 
 like tokenizing, lower case conversion and stop words removal. The text in the tweets 
 are tokenized used the ’word tokenize’ method in nltk library and then converted to 
-lowercase to remove ambiguity in the same words with capitalized and non-capitalized words. 
-Stop words could be misleading since their frequency in data is generally high, as the model 
-might train on these words and could result in overfitting. Hence, they have been removed before 
-fitting the model. Since, we are extracting the words that have gained a tweet more 
-retweets or likes, URLs have been excluded from the tweets. We also performed 
-lemmatization available in nltk Python which is very similar operation to stemming 
-where a word is reduced to its most basic form but the major difference between 
-these is, stemming can often create non-existent words, whereas lemmas are actual 
+lowercase to remove ambiguity in the same words with capitalized and 
+non-capitalized words. Stop words could be misleading since their frequency 
+in data is generally high, as the model might train on these words and could 
+result in overfitting. Hence, they have been removed before fitting the model. 
+Since, we are extracting the words that have gained a tweet more retweets or 
+likes, URLs have been excluded from the tweets. We also performed lemmatization 
+available in nltk Python which is very similar operation to stemming where a 
+word is reduced to its most basic form but the major difference between these 
+is, stemming can often create non-existent words, whereas lemmas are actual 
 words which can be looked up in a dictionary. 
 
 \subsection{NLTK}
@@ -267,22 +273,25 @@ towards the movement lately.
 
 \subsection{Logistic Regression}
 Logistic regression falls under the category of supervised learning. It measures 
-the relationship between the categorical dependent variable and one or more independent 
-variables by estimating probabilities using a logistic/sigmoid function. In spite 
-of its name this is not used for regression problem where the task is to predict the 
-real-valued output. Logistic regression is a bit similar to the linear regression or we 
-can see it as a generalized linear model. In linear regression, we predict a 
-real-valued output y based on a weighted sum of input variables. 
-Logistic regression makes predictions using probability.  The name multinomial logistic 
-regression refers to a case when the dependent variable has three or more unique values, 
-such as Positive, Neutral, or Negative. Although the type of data used for the dependent 
-variable is different from that of multiple regression, the practical use of the procedure 
+the relationship between the categorical dependent variable and one or 
+more independent variables by estimating probabilities using a 
+logistic or sigmoid function. In spite of its name this is not 
+used for regression problem where the task is to predict the 
+real-valued output. Logistic regression is a bit similar to the linear 
+regression or we can see it as a generalized linear model. In linear regression,
+ we predict a real-valued output y based on a weighted sum of input variables. 
+Logistic regression makes predictions using probability.  The name 
+multinomial logistic regression refers to a case when the dependent variable 
+has three or more unique values, such as Positive, Neutral, or Negative. 
+Although the type of data used for the dependent variable is different from 
+that of multiple regression, the practical use of the procedure 
 is similar. Logistic regression is a powerful tool, allowing multiple explanatory 
-variables being analyzed simultaneously, meanwhile reducing the effect of confounding factors. 
-However, we must pay attention to model building, avoiding just feeding software 
-with raw data and going forward to results ~\cite{hid-sp18-418-regression}. 
-Some difficult decisions on model building will depend entirely on the expertise in 
-the field of sentimental analysis.
+variables being analyzed simultaneously, meanwhile reducing the 
+effect of confounding factors. However, we must pay attention to model 
+building, avoiding just feeding software with raw data and going forward 
+to results ~\cite{hid-sp18-418-regression}. Some difficult decisions on model 
+building will depend entirely on the expertise in the field of sentimental 
+analysis.
 
 \begin{enumerate}
 \item \textbf{0 - } 
@@ -295,38 +304,48 @@ Indicates that the tweet is Negative
 \subsection{Spark}
 ``Apache Spark is a fast, in-memory data processing engine with elegant and expressive 
 development APIs to allow data workers to efficiently execute streaming, machine 
-learning or SQL workloads that require fast iterative access to datasets, with spark running 
-on Apache Hadoop YARN, developers everywhere can now create applications 
-to exploit Spark’s power, derive insights, and enrich their data science workloads 
-within a single, shared dataset in Hadoop''~\cite{hid-sp18-418-spark}. Apache Spark comprises 
-of Spark Core and a repository of libraries. The core of spark is the distributed execution 
-engine and Python APIs offer a platform for distributed ETL application development. There are many 
-libraries built on top of the core which support extensive machine learning operations.
+learning or SQL workloads that require fast iterative 
+access to datasets, with spark running on Apache Hadoop YARN, developers 
+everywhere can now create applications to exploit Spark’s power, derive 
+insights, and enrich their data science workloads within a single, 
+shared dataset in Hadoop''~\cite{hid-sp18-418-spark}. Apache Spark comprises 
+of Spark Core and a repository of libraries. The core of spark is the 
+distributed execution engine and Python APIs offer a platform for distributed 
+ETL application development. There are many libraries built on top of the 
+core which support extensive machine learning operations.
 
 \subsection{Spark MLlib}
 MLlib is apache spark's inbuilt machine learning library, it is highly scalable. 
-``MLlib fits into Spark's APIs and interoperates with NumPy in Python (as of Spark 0.9) 
-and R libraries (as of Spark 1.5) '' ~\cite{hid-sp18-418-sparkml}.``We can use any Hadoop data source 
-(HDFS, HBase, or local files), making it easy to plug into Hadoop workflows '' ~\cite{hid-sp18-418-sparkml}. 
-MLlib has a huge repository of Machine Learning Algorithms including classification algorithms, 
-Regression algorithms, Decision tree algorithms, Clustering algorithms, topic modeling algorithms and 
-so on. In our project we have used the multinomial logistic regression classifier from the Spark MLlib. The MLlib 
-is also capable of feature transformations, pipleline construction, parameter tuning, model evaluation and 
+``MLlib fits into Spark's APIs and interoperates 
+with NumPy in Python (as of Spark 0.9) and R 
+libraries (as of Spark 1.5) '' ~\cite{hid-sp18-418-sparkml}.
+``We can use any Hadoop data source (HDFS, HBase, or local files), 
+making it easy to plug into Hadoop workflows '' ~\cite{hid-sp18-418-sparkml}. 
+MLlib has a huge repository of Machine Learning Algorithms including 
+classification algorithms, Regression algorithms, 
+Decision tree algorithms, Clustering algorithms, topic modeling algorithms and 
+so on. In our project we have used the multinomial 
+logistic regression classifier from the Spark MLlib. The MLlib 
+is also capable of feature transformations, pipleline 
+construction, parameter tuning, model evaluation and 
 so on. ``MLlib contains high-quality algorithms that leverage iteration, 
 and can yield better results than the one-pass approximations sometimes used 
-on MapReduce '' ~\cite{hid-sp18-418-sparkml}. Spark MLlib also has libraries that can 
-do feature engineering related tasks like dimensionality reduction and so on, just in case 
-the number of features that are being used to build the model turns out to be really high and 
-we would need to scale it to construct an efficient model.
+on MapReduce '' ~\cite{hid-sp18-418-sparkml}. Spark MLlib also has 
+libraries that can do feature engineering related tasks like dimensionality 
+reduction and so on, just in case the number of features that are being 
+used to build the model turns out to be really high and we would need to scale 
+it to construct an efficient model.
 
 \subsection{Spark ML Pipeline}
-Pipelining is a type of architectural technique used in data science related projects. 
-It is the process of collecting the instructions from the processor through a well defined 
-pipeline. It enables us to execute and store commands in an organized manner. This operation is also known as 
-pipeline processing. Pipelining is a technique where multiple commands are 
-stacked upon each other during execution. Pipeline is divided into numerous stages and all these stages 
-are connected within themselves to form a pipe like structure. The commands enter 
-from one end and exit from the other end. Pipelining the process increases the overall throughput of the task at hand. //
+Pipelining is a type of architectural technique used in data science related 
+projects. It is the process of collecting the instructions from the processor 
+through a well defined pipeline. It enables us to execute and store 
+commands in an organized manner. This operation is also known as pipeline 
+processing. Pipelining is a technique where multiple commands are 
+stacked upon each other during execution. Pipeline is divided into numerous 
+stages and all these stages are connected within themselves to form a pipe 
+like structure. The commands enter from one end and exit from the other end. 
+Pipelining the process increases the overall throughput of the task at hand.//
 
 \begin{figure}[!ht]
 \centering\includegraphics[width=\columnwidth]{images/spark_pipeline.png}
@@ -334,42 +353,54 @@ from one end and exit from the other end. Pipelining the process increases the o
 \label{f:Pipeline in SparkML}
 \end{figure}
 
-The pipeline feature available at Spark ML Pipleline is a type of high level abstraction which helps 
-in modeling of a entire data science project. The ML pipeline package available in the Spark ML models a 
-typical data science oriented workflow and it provides overall abstractions like Transformer, Estimator, 
-Pipeline and Parameters ~\cite{hid-sp18-418-spark}. This is an overall general abstraction 
-layer that makes the analysis part more productive.
+The pipeline feature available at Spark ML Pipleline is a type of high 
+level abstraction which helps in modeling of a entire data science project.
+ The ML pipeline package available in the Spark ML models a typical 
+ data science oriented workflow and it provides overall abstractions 
+ like Transformer, Estimator, Pipeline and Parameters ~\cite{hid-sp18-418-spark}. 
+ This is an overall general abstraction layer that makes the analysis 
+ part more productive.
 
 \subsection{Docker}
-Docker is the company driving the container movement. Docker provides a container 
-platform to address every application across the hybrid cloud. 
-``Today’s businesses are under pressure to digitally transform but are constrained 
-by existing applications and infrastructure while rationalizing an increasingly 
-diverse portfolio of clouds, datacenters and application architectures, but Docker 
-enables true independence between applications and infrastructure and developers 
+Docker is the company driving the container movement. Docker provides a 
+container platform to address every application across the hybrid cloud. 
+``Today’s businesses are under pressure to digitally transform but are 
+constrained by existing applications and infrastructure while 
+rationalizing an increasingly diverse portfolio of clouds, datacenters 
+and application architectures, but Docker enables true 
+independence between applications and infrastructure and developers 
 and IT ops to unlock their potential and creates a model for better collaboration 
 and innovation'' ~\cite{hid-sp18-418-docker}. A container platform allows solving 
-multiple problems across a diverse range of applications. Container platforms deliver sustainable benefits 
-throughout a community by providing enterprise application modules including security, governance, 
-automation, support and certification over the entire application lifecycle ~\cite{hid-sp18-418-docker}.
+multiple problems across a diverse range of applications. Container platforms 
+deliver sustainable benefits throughout a community by providing enterprise 
+application modules including security, governance, automation, support and 
+certification over the entire application lifecycle ~\cite{hid-sp18-418-docker}.
 
 \subsection{Digital Ocean}
-Digital Ocean is a cloud infrastructure provider based out in the United States. The basic usage fee is 5$ which would enable us to use 
-3 CPU, 25 GB hard disk and finally a Bandwidth of 1TB provided with Docker and Ubuntu platform.``DigitalOcean has 
-optimized the configuration process to save time when running and scaling distributed applications, machine learning workloads, 
-hosted services, client websites, or CD environments'' ~\cite{hid-sp18-418-digital-ocean}. Also, one of the biggest advantage 
-of digital ocean is the community support forums that has well defined tutorials and developer forums which enables 
-users to gain the knowledge required to work with the platform in a concise manner. We can also build and run applications 
-with docker on the digital ocean platform. So we have dockerized our project and then pushed the image onto the dockerhub 
-repository, from which we were able to pull the same onto our cloud environment and start a container instance to run the 
-webservice. Our webservice is now live and accesible from anywhere.
+Digital Ocean is a cloud infrastructure provider based out in the 
+United States. The basic usage fee is 5 dollars which would enable us to use 
+3 CPU, 25 GB hard disk and finally a Bandwidth of 1TB provided with Docker and 
+Ubuntu platform.``DigitalOcean has optimized the configuration process to save 
+time when running and scaling distributed applications, machine learning 
+workloads, hosted services, client websites, or CD environments'' 
+~\cite{hid-sp18-418-digital-ocean}. Also, one of the biggest advantage 
+of digital ocean is the community support forums that has well defined 
+tutorials and developer forums which enables users to gain the knowledge 
+required to work with the platform in a concise manner. We can also build 
+and run applications with docker on the digital ocean platform. So we have 
+dockerized our project and then pushed the image onto the dockerhub 
+repository, from which we were able to pull the same onto our cloud environment 
+and start a container instance to run the webservice. Our webservice is now 
+live and accesible from anywhere.
 
 \section{Results}
 
-We have successfully built a RESTful webservice with flask that comprises of a sentimental analysis 
-classifier based on a multinomial logistic regression model which classifies the tweets data as 
-positive or negatie or neutral tweets and also display the split of the tweets based on sentiments. 
-we have dockerized the entire project and hosted it on a cloud platform known as digital ocean. 
+We have successfully built a RESTful webservice with flask that comprises of a 
+sentimental analysis classifier based on a multinomial logistic regression 
+model which classifies the tweets data as positive or negatie or neutral 
+tweets and also display the split of the tweets based on sentiments. 
+we have dockerized the entire project and hosted it on a cloud platform known as 
+digital ocean. 
 
 \begin{figure}[!ht]
 \centering\includegraphics[width=\columnwidth]{images/result.png}
@@ -379,25 +410,33 @@ we have dockerized the entire project and hosted it on a cloud platform known as
 
 
 \section{Work Breakdown}
-Surya Prakash Sekar has worked on the python code to pre-process and clean the entire dataset 
-obtained, feature extraction, build the sentimental analysis classifier model and to visualize the results on graph using 
-matplotlib. Venkatesh Aditya has worked on the feature engineering for the model ,the spark code to 
-build the multinomial logistic regression model that classifies the sentiment on the tweets.
-The RESTful webservice was collectively done by both Venkatesh Aditya and Surya Prakash Sekar. 
-The report work was collectively done by both Venkatesh Aditya and Surya Prakash Sekar as well.
+Surya Prakash Sekar has worked on the python code to pre-process and clean the 
+entire dataset 
+obtained, feature extraction, build the sentimental analysis classifier model 
+and to visualize the results on graph using matplotlib. Venkatesh Aditya has 
+worked on the feature engineering for the model ,the spark code to build the 
+multinomial logistic regression model that 
+classifies the sentiment on the tweets.
+The RESTful webservice, Dockerization and hosting it on digital ocean was 
+collectively done by both Venkatesh Aditya and Surya Prakash Sekar. 
+The report work was collectively done by both Venkatesh Aditya and Surya 
+Prakash Sekar as well.
 
 \section{Conclusion}
-We have successfully implemented our RESTful webservice and also succeeded in hosting the application 
-on the cloud platform know as Digital Ocean. The application provides a visualization indicating the 
-split of the latest 10000 twitter tweets with respect to a particular topic chosen by 
-the user and we would be able to infer the trend of the tweet at that instant by inferring 
-the sentiment scores from the latest tweets. Since we dockerized the entire project 
-it can be easily replicated and used across platforms. The service would largely benefit people 
-who are trying to figure out the latest scenario on twitter with respect to an issue, movement, 
-campaign and so on. People can easily figure out the trend with respect to a particular topic 
-this way and this application be applied across many domains like business and product analysis, marketing, 
-movie performance, campaign performances, latest trends and so on, thus enabling people 
-to take more data driven decisions in all aspects.
+We have successfully implemented our RESTful webservice and also succeeded in 
+hosting the application on the cloud platform know as Digital Ocean. The 
+application provides a visualization indicating the split of the latest 10000 
+twitter tweets with respect to a particular topic chosen by the user and we 
+would be able to infer the trend of the tweet at that instant by inferring the 
+sentiment scores from the latest tweets. Since we dockerized the entire project 
+it can be easily replicated and used across platforms. The service would 
+largely benefit people who are trying to figure out the latest scenario on 
+twitter with respect to an issue, movement, campaign and so on. People can 
+easily figure out the trend with respect to a particular topic this way and 
+this application be applied across many domains like business and product 
+analysis, marketing, movie performance, campaign performances, latest trends 
+and so on, thus enabling people to take more data driven decisions in all 
+aspects.
 
 
 \begin{acks}
