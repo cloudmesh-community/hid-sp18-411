@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 
 # Removed API Key and Secret
 def twitter_download(hashtag):
-    API_KEY = '3nAw2E7Le0G2k4TYwcShLQpIa'
-    API_SECRET = '2neHmiZjzToxkrcErylPYubnXEUwoCTUPuwDoXPiFgQX2WY2hc'
+    API_KEY = ''
+    API_SECRET = ''
     auth = tweepy.AppAuthHandler(API_KEY, API_SECRET)
     api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
