@@ -5,7 +5,7 @@
 This RESTful service is used to perform twitter analysis using pyspark ml libraries. The service sucessfully
 runs within the docker container as well. The docker container was launched from the DigitalOcean cloud platform.
 
-You need have a twitter api endpoint configured in restapi.py for the serviceto work.
+You need to have a twitter api endpoint configured in restapi.py for the service to work.
 
 # Instructions for Creating Docker image :
 
