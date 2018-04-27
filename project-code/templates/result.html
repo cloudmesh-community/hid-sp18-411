@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result page</title>
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+</head>
+<body>
+<div align="center">
+    <form method=POST action="{{ url_for('search_word') }}">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Twitter Hashtag:</label>
+            <input class="form-control" name="Search"
+                   placeholder="SearchBar">
+            <button type="submit" class="btn btn-primary btn-block">Search
+            </button>
+        </div>
+    </form>
+</div>
+<div align="center">
+    <img src="static/result.png" height="320" width="320">
+</div>
+</body>
+</html>
