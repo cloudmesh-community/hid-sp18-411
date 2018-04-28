@@ -1,5 +1,7 @@
 # Twitter Analysis on Digital Ocean
 
+* The service is hosted on DigitalOcean cloud at http://159.89.36.6:5000 
+
 # Service Description
 
 This RESTful service is used to perform twitter analysis using pyspark ml libraries. The service sucessfully
@@ -70,6 +72,4 @@ You need to have a twitter api endpoint configured in restapi.py for the service
     sudo docker run -d -p 5000:5000 [image_name]
     `  
 
-##### Check the results using your browser
-* The results are available at http://159.89.36.6:5000 
 
