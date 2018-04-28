@@ -40,8 +40,11 @@ sentimental analysis model is created using python's textblob as well in order t
 the tweets before in hand for the hashtag data that is selected by the user. 
 SparkML library is then used to perform sentimental analysis on the tweets data 
 and a summary is provided with respect to it. A graph displaying the 
-distribution of the tweets based on the sentiment and the top 5 positive and 
-negative tweets with respect to the input hashtag is also displayed.
+distribution of the tweets based on the sentiment of the input hashtag is 
+displayed. We have hosted the webservice that runs using the textblob model on 
+digital ocean, which is a cloud platform with the help of a docker image built on 
+Ubuntu. The dockerized package uses the textblob model for sentimental analysis 
+classifier.
 
 \end{abstract}
 
@@ -83,9 +86,7 @@ attention from public and led to a huge population participate in the trend.
 Our research in this project is mostly focused on understanding the different 
 words around the tweets that have gained a lot of attention from public and also 
 showing how the regular sentiment analysis might be very useful to understand 
-people’s opinion on it. By showcasing the top positive and negative tweets and 
-the split of the tweets based on sentiment, we would be able to get a overall 
-picture with respect to an issue. For example, lets consider that our favorite 
+people’s opinion on it. For example, lets consider that our favorite 
 football team is playing a game, then using a relevant hashtag we would be able 
 to visualize the emotions of the general public over the course of the game, and 
 results would ideally be something like where if the team wins then the output 
@@ -432,8 +433,7 @@ hosting the application on the cloud platform know as Digital Ocean. The
 application provides a visualization indicating the split of the latest 10000 
 twitter tweets with respect to a particular topic chosen by the user and we 
 would be able to infer the trend of the tweet at that instant by inferring the 
-sentiment scores from the latest tweets. Since we dockerized the entire project 
-it can be easily replicated and used across platforms. The service would 
+sentiment scores from the latest tweets. The service would 
 largely benefit people who are trying to figure out the latest scenario on 
 twitter with respect to an issue, movement, campaign and so on. People can 
 easily figure out the trend with respect to a particular topic this way and 
@@ -442,14 +442,12 @@ analysis, marketing, movie performance, campaign performances, latest trends
 and so on, thus enabling people to take more data driven decisions in all 
 aspects.
 
-
 \begin{acks}
 
 	The authors would like to thank Dr.~Gregor~von~Laszewski for his
 	support throughout the project and suggestions to write this paper.
 
 \end{acks}
-
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
