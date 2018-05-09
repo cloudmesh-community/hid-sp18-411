@@ -1,6 +1,23 @@
 % status: 100
 % chapter: Spark
 
+\def\paperstatus{100} % a number from 0-100 indicating your status. 100
+                % means completed
+\def\paperchapter{Spark} % This section is typically a single keyword. from
+                   % a small list. Consult with theinstructors about
+                   % yours. They typically fill it out once your first
+                   % text has been reviewed.
+\def\hid{hid-sp18-411,hid-sp18-418} % all hids of the authors of this
+                                % paper. The paper must only be in one
+                                % authors directory and all other
+                                % authors contribute to it in that
+                                % directory. That authors hid must be
+                                % listed first
+\def\volume{9} % the volume of the proceedings in which this paper is to
+           % be included
+
+\def\locator{\hid, Volume: \volume, Chapter: \paperchapter, Status: \paperstatus. \newline}
+
 \title{Twitter Sentimental Analysis with Spark}
 
 
@@ -47,7 +64,7 @@ classifier.
 
 \end{abstract}
 
-\keywords{hid-sp18-411,hid-sp18-418, Swagger, Spark, API, Cloud, Twitter}
+\keywords{\locator\ Swagger, Spark, API, Cloud, Twitter}
 
 \maketitle
 
@@ -349,7 +366,7 @@ processing. Pipelining is a technique where multiple commands are
 stacked upon each other during execution. Pipeline is divided into numerous 
 stages and all these stages are connected within themselves to form a pipe 
 like structure. The commands enter from one end and exit from the other end. 
-Pipelining the process increases the overall throughput of the task at hand.//
+Pipelining the process increases the overall throughput of the task at hand.
 
 \begin{figure}[!ht]
 \centering\includegraphics[width=\columnwidth]{images/spark_pipeline.png}
@@ -399,12 +416,12 @@ live and accesible from anywhere.
 
 \section{Results}
 
-We have successfully built a RESTful webservice with flask that comprises of a 
-sentimental analysis classifier based on a multinomial logistic regression 
-model which classifies the tweets data as positive or negatie or neutral 
-tweets and also display the split of the tweets based on sentiments. 
-we have dockerized the entire project and hosted it on a cloud platform known as 
-digital ocean. 
+We have successfully built a RESTful webservice with flask that
+comprises of a sentimental analysis classifier based on a multinomial
+logistic regression model which classifies the tweets data as positive
+or negatie or neutral tweets and also display the split of the tweets
+based on sentiments.  we have dockerized the entire project and hosted
+it on a cloud platform known as digital ocean.
 
 \begin{figure}[!ht]
 \centering\includegraphics[width=\columnwidth]{images/result.png}
@@ -414,31 +431,31 @@ digital ocean.
 
 
 \section{Work Breakdown}
-Surya Prakash Sekar has worked on the python code to pre-process and clean the 
-entire dataset 
-obtained, feature extraction, build the sentimental analysis classifier model 
-and to visualize the results on graph using matplotlib. Venkatesh Aditya has 
-worked on the feature engineering for the model ,the spark code to build the 
-multinomial logistic regression model that 
-classifies the sentiment on the tweets.
-The RESTful webservice, Dockerization and hosting it on digital ocean was 
-collectively done by both Venkatesh Aditya and Surya Prakash Sekar. 
-The report work was collectively done by both Venkatesh Aditya and Surya 
-Prakash Sekar as well.
+Surya Prakash Sekar has worked on the python code to pre-process and
+clean the entire dataset obtained, feature extraction, build the
+sentimental analysis classifier model and to visualize the results on
+graph using matplotlib. Venkatesh Aditya has worked on the feature
+engineering for the model, the spark code to build the multinomial
+logistic regression model that classifies the sentiment on the tweets.
+The RESTful webservice, Dockerization and hosting it on digital ocean
+was collectively done by both Venkatesh Aditya and Surya Prakash
+Sekar.  The report work was collectively done by both Venkatesh Aditya
+and Surya Prakash Sekar as well.
 
 \section{Conclusion}
-We have successfully implemented our RESTful webservice and also succeeded in 
-hosting the application on the cloud platform know as Digital Ocean. The 
-application provides a visualization indicating the split of the latest 10000 
-twitter tweets with respect to a particular topic chosen by the user and we 
-would be able to infer the trend of the tweet at that instant by inferring the 
-sentiment scores from the latest tweets. The service would 
-largely benefit people who are trying to figure out the latest scenario on 
-twitter with respect to an issue, movement, campaign and so on. People can 
-easily figure out the trend with respect to a particular topic this way and 
-this application be applied across many domains like business and product 
-analysis, marketing, movie performance, campaign performances, latest trends 
-and so on, thus enabling people to take more data driven decisions in all 
+We have successfully implemented our RESTful webservice and also
+succeeded in hosting the application on the cloud platform know as
+Digital Ocean. The application provides a visualization indicating the
+split of the latest 10000 twitter tweets with respect to a particular
+topic chosen by the user and we would be able to infer the trend of
+the tweet at that instant by inferring the sentiment scores from the
+latest tweets. The service would largely benefit people who are trying
+to figure out the latest scenario on twitter with respect to an issue,
+movement, campaign and so on. People can easily figure out the trend
+with respect to a particular topic this way and this application be
+applied across many domains like business and product analysis,
+marketing, movie performance, campaign performances, latest trends and
+so on, thus enabling people to take more data driven decisions in all
 aspects.
 
 \begin{acks}
